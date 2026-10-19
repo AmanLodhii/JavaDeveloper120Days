@@ -1,0 +1,52 @@
+What is Programming ?
+    Programming is giving a computer a list of exact instructions to solve a problem. A computer only follows
+     instructions; it does not guess.
+
+Programming Language ?
+    A programming language is the way we write those instructions in a form humans can read.
+    which is then converted to machine code (0s and 1s).
+
+Why Java?
+    •Platform independent: write once, run anywhere (WORA). The same compiled code runs on Windows,
+    Linux and Mac.
+    •Object-oriented: code is organized into classes and objects (Week 3).
+    •Robust and secure: strong type checking, exception handling, automatic memory management
+    (garbage collection), no direct pointer access.
+    •Huge ecosystem: Spring Boot, Hibernate, Maven, and a very large job market for backend developers.
+
+Real-world uses of Java
+    •Banking and payment systems (core banking, UPI-style backends).
+    •Large company backends (e-commerce, insurance, telecom) built with Spring Boot.
+    •Android apps (Java and Kotlin).
+    •Big data tools (Hadoop, Kafka, Spark ecosystem) and enterprise software.
+
+JDK vs JRE vs JVM
+
+    Term	Full form	                What it is
+    JVM	    Java Virtual Machine	    Runs the compiled bytecode in form of 0’s and 1’s. Different JVM for each OS.
+    JRE	    Java Runtime Environment	JVM plus the libraries needed to run a program.
+    JDK	    Java Development Kit	    JRE plus tools to write and compile (javac, debugger).
+
+    JDK contains JRE, and JRE contains JVM. Developers install the JDK.
+
+How a Java program executes
+    1.You write code in a .java file (source code).
+    2.The compiler javac converts it into a .class file containing bytecode.
+    3.The JVM loads the bytecode, verifies it, and runs it (interpreter plus JIT compiler for speed).
+
+    Bytecode is platform independent. The JVM is platform dependent.
+    is how Java achieves "write once, run anywhere".
+
+Part	               Meaning
+public	                Accessible from anywhere, so the JVM can call it.
+static	                Can run without creating an object.
+void	                Returns nothing.
+main	                The fixed entry point name the JVM looks for.
+String[] args	        Command-line arguments.
+System.out.println	    Prints text and moves to the next line.
+
+Important points
+    •Java is case sensitive: Main and main are different.
+    •Every statement ends with a semicolon ;.
+    •A public class name must match the file name (Main in Main.java).
+    •print() stays on the same line; println() moves to the next line.
