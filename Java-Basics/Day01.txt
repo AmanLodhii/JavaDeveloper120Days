@@ -6,6 +6,22 @@ Programming Language ?
     A programming language is the way we write those instructions in a form humans can read.
     which is then converted to machine code (0s and 1s).
 
+    High level - close to human
+    Low level - close to machine
+
+1. IDE, debugging, and reading compiler errors
+    An IDE (such as IntelliJ IDEA, Eclipse, or VS Code with Java extensions) helps you write, run, and inspect
+     Java programs. A debugger lets you pause execution, inspect variables, and step through code.
+    Why it matters: Professional development involves diagnosing bugs, not just writing code.
+    Learn the difference between compile-time errors, runtime exceptions, and logic errors.
+    int total = 0;
+    for (int i = 1; i <= 3; i++) {
+        total += i;   // Set a breakpoint here and inspect i and total
+    }
+    System.out.println(total);
+    Practice: Create a deliberate off-by-one bug, set a breakpoint, step through the loop,
+    and explain why the output differs from your expectation
+
 Why Java?
     •Platform independent: write once, run anywhere (WORA). The same compiled code runs on Windows,
     Linux and Mac.
@@ -47,6 +63,7 @@ System.out.println	    Prints text and moves to the next line.
 
 Important points
     •Java is case sensitive: Main and main are different.
+        main
     •Every statement ends with a semicolon ;.
     •A public class name must match the file name (Main in Main.java).
     •print() stays on the same line; println() moves to the next line.
