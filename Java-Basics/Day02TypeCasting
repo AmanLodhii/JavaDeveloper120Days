@@ -1,0 +1,9 @@
+Type casting
+    Widening (small to big) is automatic and safe.
+    Narrowing (big to small) must be written explicitly and may lose data.
+
+follow of data
+    byte  →  short  →  int  →  long  →  float  →  double
+                  ▲
+                 char
+
