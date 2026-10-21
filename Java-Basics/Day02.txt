@@ -1,5 +1,5 @@
 Naming Convention
-    1. PascalCase - use for clas / interfaces
+    1. PascalCase - use for class / interfaces
             example - AppleAndBanana
     2. camelCase - use for Method/variable
             example - totalFruits
@@ -28,8 +28,8 @@ kind of variables
 
 Data type
     generally it is two types
-        1. primitives types
-        2. Non-Primitives types
+        1. primitives types - prebuild
+        2. Non-Primitives types - created by coder
 
     java has 8 primitive types and reference type(String, arrays, classes)
 
