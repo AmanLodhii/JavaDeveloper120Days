@@ -17,6 +17,8 @@ Variables - variable is a box in the memory that stores a value.
 
 in variable are complete in three steps
     Declaration - creates the variable - int x;
+    int age;
+    age = 10;
     initialization - give it the first value - x = 4;
     Assignment  - change the value later - x = 10;
 

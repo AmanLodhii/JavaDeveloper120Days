@@ -1,0 +1,83 @@
+Operators
+    Operators are use to perform operation on variable and values.
+
+     7 + 11 = 18;
+
+     now,   1. 7 and 11 is operand
+            2. + is operator
+            3. 18 is result
+
+    Types of operators
+        1. Arithmetic        +,-,*,/,%          (% gives the remainder)
+        2. Relational        >,<,>=,<=,==,!=    (result always boolean)
+        3. logical           &&, ||, !          (Combine condition) // short circuit
+
+        short circuit
+
+        Short-circuit operators in Java are logical operators (&& and ||) that skip the evaluation of the second operand as
+        soon as the final result can be determined.
+
+
+        The Two Short-Circuit Operators
+
+
+        1. Short-Circuit AND (&&)
+
+        • The Rule: If the left-hand expression is false, the entire expression must be false.
+        • The Behavior: Java skips checking the right-hand expression entirely.
+
+        2. Short-Circuit OR (||)
+
+        • The Rule: If the left-hand expression is true, the entire expression must be true.
+        • The Behavior: Java skips checking the right-hand expression entirely.
+
+        4. Assignment        =, +=, -=, *=, /=  (x += 5 means x = x+5)
+
+    5. Bitwise operator - Works on binary data(Bit level), so they are used only integer type.
+            Java divides these operations into two groups: standard bitwise operators and bit-shift operators
+
+Operator	Name	                Behavior / Rule	                                                            Example using a = 5 (0101) and b = 3 (0011)
+&	        Bitwise AND     	    Returns 1 only if both corresponding bits are 1.	                        a & b → 0001 (Decimal: 1)
+|	        Bitwise OR	            Returns 1 if at least one of the bits is 1.	                                a | b → 0111 (Decimal: 7)
+^	        Bitwise XOR	            Returns 1 if the corresponding bits are different.	                        a ^ b → 0110 (Decimal: 6)
+~	        Bitwise NOT (Complement)	A unary operator that inverts all bits (0 becomes 1; 1 becomes 0).	    ~a → 1010 (Decimal: -6 due to 2's complement)
+<<	        Left Shift	            Shifts bits to the left by specified spaces. Fills right side with 0.       a << 2 Output: 20 (5 * 2^2)
+Bit-shift operator
+>>	        Signed Right Shift	    Shifts bits to the right. Fills left side with the original sign bit (preserves negative/positive).	a >> 1 → 0010 (Decimal: 2)
+>>>	        Unsigned Right Shift	Shifts bits to the right. Always fills the leftmost empty spaces with 0.	-5 >>> 1 → Results in a large positive integer.
+
+    6. Unary Operators (Works on single operand)
+
+    Operator            Name
+        +           unary Plus
+        -           unary minus
+        ++          increment       pre ++a or post a++
+        --          Decrement       pre --a or a--
+        !           Logical not
+
+    Ternary Operator
+        use for if else condition
+
+        condition ? a : b
+
+                int a = 10;
+                int b = 20;
+
+                // One-liner replacement
+                int max = (a > b) ? a : b;
+
+                System.out.println(max); // Output: 20
+
+
+        Operator precedence (high to low)
+        Level	        Operators
+        1	        Postfix i++, i--; unary ++i, --i, !, -
+        2	        *  /  %
+        3	        +  -
+        4	        Shifts <<  >>  >>>
+        5	        Relational <  >  <=  >=
+        6	        Equality ==  !=
+        7	        Bitwise &, then ^, then |
+        8	        &&, then ||
+        9	        Ternary ? :
+        10	        Assignment =  +=  -= ...
