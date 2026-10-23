@@ -1,0 +1,41 @@
+ Why do we need input?
+
+
+Step 1: Import
+Type import java.util.Scanner;
+
+Step 2: Create the object
+Scanner apple = new Scanner(System.in);
+    System in - keyword se input lena
+
+Step 3: Read input
+String name = apple.nextLine();
+int age = sc.nextInt();
+
+Scanner methods
+Show this table on screen and explain each row with one tiny example:
+You want                Method          Example input
+One whole line of text  nextLine()      Java developer
+One word                next()          singleword
+Whole number            nextInt()       25
+Big whole number        nextLong()      9876543210
+Decimal number          nextDouble()    75.5
+True / false            nextBoolean()   true
+
+nextLine() gets skipped
+System.out.print("Enter age: ");
+int age = sc.nextInt(); // store - 21 and enter
+
+
+System.out.print("Enter name: ");
+String name = sc.nextLine(); // store enter(empty line )
+
+System.out.println("Age: " + age + ", Name: " + name);
+
+fix code
+int age = sc.nextInt();
+sc.nextLine();
+String name = sc.nextLine();
+
+Another common error
+nextInt() ko number ki jagah text mile, to InputMismatchException aati ha
