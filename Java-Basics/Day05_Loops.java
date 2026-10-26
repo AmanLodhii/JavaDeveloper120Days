@@ -17,12 +17,12 @@ public class Day05_Loops {
             System.out.println(i);
         }
 
-        Dry code - write the logic by hand
+//        Dry code - write the logic by hand
 
-        while loop
-      Syntax
-        initialization -> int n = 1;
-        while(Condition){Body; update}
+//        while loop
+//      Syntax
+//        initialization -> int n = 1;
+//        while(Condition){Body; update}
         int n = 1;
         while (n<4){
             System.out.println(n);
