@@ -1,5 +1,3 @@
-import javax.xml.transform.Source;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Day06_Methods {
