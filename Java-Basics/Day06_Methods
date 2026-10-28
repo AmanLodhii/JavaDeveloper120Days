@@ -1,0 +1,11 @@
+Method - a method is block of code that does one job and can be reused.
+    input -> block of code -> output
+Syntax-
+    accessModifiers static returnType methodName(parameters){
+    // body
+    return value;
+    }
+
+parameters - The variable in the method definition (int a)
+Argument - The actual value passed in the call(5)
+return type - the type of value sent back, or void for none
