@@ -1,0 +1,99 @@
+Method overloading
+  ->  concept in Java that allows us to define multiple methods with the same name but
+      different parameter lists in the same class.
+  ->  It is a form of compile-time polymorphism because Java determines which overloaded
+      method to call during compilation, based on the arguments passed.
+   example -
+        Real project example: Search users in a backend application
+
+call the method by using a object
+    public int add(int a, int b) { // not using static keyword
+                return a + b;
+            }
+    public static void main(String[] args) {
+            className objectName = new classname();
+            System.out.println(banana.add(78,89));
+    }
+
+
+  1. What is method overloading?
+  example - Developing a calculator. You want to add two integers, two decimal numbers,
+  or three integers.
+
+  You could create three different methods:
+  - addTwoIntegers()
+  - addTwoDoubles()
+  - addThreeIntegers()
+  But this makes the code harder to remember and use.
+
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    How does method overloading work?
+
+    public static void main(String[] args) {
+            Calculator calc = new Calculator();
+
+            System.out.println(calc.add(10, 20));
+            System.out.println(calc.add(2.5, 3.5));
+            System.out.println(calc.add(10, 20, 30));
+        }
+
+    What are the ways to overload a method?
+    There are three common ways to overload a method.
+
+        A.  By changing the number of parameters
+            void show(int a) {
+                    System.out.println(a);
+                }
+
+                void show(int a, int b) {
+                    System.out.println(a + ", " + b);
+                }
+
+        B. By changing the data types of parameters
+            void show(int value) {
+                    System.out.println("Integer: " + value);
+                }
+
+                void show(String value) {
+                    System.out.println("String: " + value);
+                }
+
+                public static void main(String[] args) {
+                    Display d = new Display();
+
+                    d.show(100);
+                    d.show("Java");
+                }
+
+        C. By changing the order of parameter types
+            void show(int a, String b) {
+                    System.out.println(a + " " + b);
+                }
+
+                void show(String a, int b) {
+                    System.out.println(a + " " + b);
+                }
+
+                public static void main(String[] args) {
+                    Display d = new Display();
+
+                    d.show(10, "Java");
+                    d.show("Java", 10);
+                }
+
+Question: Which method executes for show("Java")?
+    void show(int x) { }
+    void show(String x) { }
+    void show(double x) { }
+    None of these

@@ -18,6 +18,6 @@ public class Day06_Methods {
         int b = sc.nextInt();
         int result = add(a,b);
         System.out.print("Sum of two numbers is - " + result);
-
+        
     }
 }
