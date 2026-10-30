@@ -1,0 +1,194 @@
+Array
+An array in Java is a container object that holds a fixed number of values of the same type.
+Each value in the array is called an element, and every element is accessed using an index.
+
+Key points:
+    Arrays store multiple values in a single variable
+    All elements in an array must be of the same data type
+    Array size is fixed once created
+    Elements are stored in contiguous memory locations
+
+    Why Do We Use Arrays?
+        Arrays help us manage multiple related values efficiently.
+
+        For example,
+            imagine storing the marks of 100 students.
+            Without arrays, you would need 100 variables.
+
+        With arrays:
+            int[] marks = new int[100];
+            You can store all 100 marks in one array.
+
+    Advantages of arrays:
+        1. Store multiple values using one variable.
+        2. Reduce unnecessary variable declarations.
+        3. Access elements using indexes.
+        4. Easily process data using loops.
+        5. Make programs more organized.
+
+    Real-world examples:
+        - Student marks
+        - Employee salaries
+        - Product prices
+        - Daily temperatures
+        - Monthly sales records
+
+Array Declaration and Initialization
+
+    dataType[] arrayName;
+
+        Example:
+            int[] numbers;
+            double[] prices;
+            String[] names;
+            char[] letters;
+        also written like this following
+            int numbers[];
+
+Array initialization
+        int[] numbers = {10, 20, 30, 40, 50};
+
+
+        Here:
+        - int is the data type.
+        - numbers is the array name.
+        - {10, 20, 30, 40, 50} contains the elements.
+
+Declaration and initialization separately
+
+            int[] numbers;
+            numbers = new int[]{10, 20, 30, 40, 50};
+
+        You can also declare and initialize an array in one statement:
+            int[] numbers = new int[]{10, 20, 30, 40, 50};
+
+Creating Arrays Using new
+        Java provides the new keyword to create arrays dynamically.
+
+        Syntax:
+            dataType[] arrayName = new dataType[size];
+
+
+        Example:
+            int[] numbers = new int[5];
+
+
+        This creates an integer array with five elements.
+
+        Initially, its elements contain default values:
+        Index:    0   1   2   3   4
+        Value:    0   0   0   0   0
+
+
+        You can assign values later:
+            numbers[0] = 10;
+            numbers[1] = 20;
+            numbers[2] = 30;
+            numbers[3] = 40;
+            numbers[4] = 50;
+
+Array Indexing
+    Every element in an array has a unique position called an index.
+    Java array indexing starts from 0, not 1.
+
+    Example:
+        int[] numbers = {10, 20, 30, 40, 50};
+
+   Last index = Array length - 1
+
+Accessing and Updating Array Elements
+
+    You can access an element using its index.
+
+A. Accessing elements
+    int[] numbers = {10, 20, 30, 40, 50};
+
+        System.out.println(numbers[0]);
+        System.out.println(numbers[2]);
+        System.out.println(numbers[4]);
+
+Updating elements
+    You can change an element by assigning a new value to its index.
+        int[] numbers = {10, 20, 30, 40, 50};
+
+        numbers[2] = 100;
+
+        System.out.println(numbers[2]);
+
+The length Property
+    Java provides a built-in length property to find the size of an array.
+
+    Example:
+        int[] numbers = {10, 20, 30, 40, 50};
+        System.out.println(numbers.length);
+
+            length vs length()
+        Expression	        Used for
+        array.length	    Array size
+        string.length()	    String length
+
+Traversing Arrays Using Loops
+    Traversing an array means visiting each element one by one.
+    You can use different loops to traverse an array.
+
+A. Using a for loop
+
+        public static void main(String[] args) {
+
+            int[] numbers = {10, 20, 30, 40, 50};
+
+            for (int i = 0; i < numbers.length; i++) {
+                System.out.println(numbers[i]);
+            }
+        }
+
+B. Using an enhanced for loop
+    Also called a for-each loop.
+
+        int[] numbers = {10, 20, 30, 40, 50};
+
+        for (int num : numbers) {
+            System.out.println(num);
+        }
+
+Common Array Errors
+        Beginners often make mistakes while working with arrays.
+        Let's understand the most common ones.
+
+        A. ArrayIndexOutOfBoundsException
+        This exception occurs when you try to access an invalid array index.
+            int[] numbers = {10, 20, 30};
+
+            System.out.println(numbers[5]);
+
+        Why?
+        The array contains only three elements.
+        Valid indexes are: 0,1,2
+
+        B. Using an incorrect loop condition
+            int[] numbers = {10, 20, 30};
+
+            for (int i = 0; i <= numbers.length; i++) {
+                System.out.println(numbers[i]);
+            }
+
+            Why is it wrong?
+            The last valid index is numbers.length - 1.
+            Using <= makes the loop try to access an invalid index. use <
+
+        C. NullPointerException
+            This occurs when you try to access an array reference that is null.
+            int[] numbers = null;
+
+            System.out.println(numbers[0]);
+
+            Solution:
+            int[] numbers = new int[5];
+            System.out.println(numbers[0]);
+
+        D. Negative array size
+            You cannot create an array with a negative size.
+            int[] numbers = new int[-5];
+
+        E. Accessing an array before initialization
+            int[] numbers;
