@@ -1,34 +1,8 @@
-Pass by Value in Java
-    Pass by value means Java passes a copy of a variable's value to a method.
-    When you pass a variable to a method, the original variable is not directly
-    passed. The method receives a copy.
+Varargs in Java
+    Varargs (Variable Arguments) allow a method to accept variable number of arguments.
 
-Example 1: Passing a primitive value
-    static void changeValue(int x) {
-            x = 50;
-            System.out.println("Inside method: " + x);
-        }
-
-        public static void main(String[] args) {
-
-            int num = 10;
-
-            changeValue(num);
-
-            System.out.println("Outside method: " + num);
-        }
-
-Why?
-1. num contains 10.
-2. changeValue(num) passes a copy of num.
-3. Inside the method, x becomes 50.
-4. The original num remains 10.
-
- 2. Varargs in Java
-    Varargs (Variable Arguments) allow a method to accept a variable number of arguments.
-
-    Normally, a method requires a fixed number of arguments. With varargs, you can pass zero, one, or multiple arguments.
-
+    Normally, a method requires a fixed number of arguments. With varargs, you can pass zero,
+     one, or multiple arguments.
     Syntax
             returnType methodName(dataType... variableName) {
                 // code
@@ -56,7 +30,8 @@ Why?
     How does varargs work?
     - int... numbers accepts multiple integer arguments.
     - Inside the method, numbers behaves like an array.
-    - You can use loops to access its elements.
+    int... nuumbers -> int[] numbers = {};
+    - You can use loops to access its elements. for each loop are used
     - You can pass zero or more arguments.
 
  Important rules of varargs
@@ -80,31 +55,17 @@ Why?
 
 Recursion in Java
     Recursion is a technique in which a method calls itself to solve a problem.
-    A recursive method keeps calling itself with a smaller or simpler input until it reaches a stopping condition.
+    A recursive method keeps calling itself with a smaller or simpler input until it reaches
+    a stopping condition.
 
     Every recursive method should have two important parts:
         1. Base condition: Stops the recursion.
         2. Recursive call: Calls the same method again.
 
-            static void printNumber(int n) {
 
-                // Base condition
-                if (n > 5) {
-                    return;
-                }
+Factorial 5! = 5*4*3*2*1   6! = 6*5*4*3*2*1 and
+        1! = 1 and 0! = 1
 
-                System.out.println(n);
-
-                // Recursive call
-                printNumber(n + 1);
-            }
-
-            public static void main(String[] args) {
-
-                printNumber(1);
-            }
-
-Factorial
             static int factorial(int n) {
 
                 if (n == 0 || n == 1) {
