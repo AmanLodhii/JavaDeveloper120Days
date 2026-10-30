@@ -6,7 +6,7 @@ Key points:
     Arrays store multiple values in a single variable
     All elements in an array must be of the same data type
     Array size is fixed once created
-    Elements are stored in contiguous memory locations
+    Elements are stored in contiguous memory locations local address - a -> 4568755 b ->
 
     Why Do We Use Arrays?
         Arrays help us manage multiple related values efficiently.
@@ -46,12 +46,12 @@ Array Declaration and Initialization
             int numbers[];
 
 Array initialization
-        int[] numbers = {10, 20, 30, 40, 50};
+        int[] apple = {10, 20, 30, 40, 50};
 
 
         Here:
         - int is the data type.
-        - numbers is the array name.
+        - apple is the array name.
         - {10, 20, 30, 40, 50} contains the elements.
 
 Declaration and initialization separately
