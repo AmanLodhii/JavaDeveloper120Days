@@ -1,0 +1,122 @@
+Pass by Value in Java
+    Pass by value means Java passes a copy of a variable's value to a method.
+    When you pass a variable to a method, the original variable is not directly
+    passed. The method receives a copy.
+
+Example 1: Passing a primitive value
+    static void changeValue(int x) {
+            x = 50;
+            System.out.println("Inside method: " + x);
+        }
+
+        public static void main(String[] args) {
+
+            int num = 10;
+
+            changeValue(num);
+
+            System.out.println("Outside method: " + num);
+        }
+
+Why?
+1. num contains 10.
+2. changeValue(num) passes a copy of num.
+3. Inside the method, x becomes 50.
+4. The original num remains 10.
+
+ 2. Varargs in Java
+    Varargs (Variable Arguments) allow a method to accept a variable number of arguments.
+
+    Normally, a method requires a fixed number of arguments. With varargs, you can pass zero, one, or multiple arguments.
+
+    Syntax
+            returnType methodName(dataType... variableName) {
+                // code
+            }
+
+    example -
+                 static int sum(int... numbers) {
+
+                        int total = 0;
+
+                        for (int num : numbers) {
+                            total = total + num;
+                        }
+
+                        return total;
+                    }
+
+                    public static void main(String[] args) {
+
+                        System.out.println(sum(10, 20));
+                        System.out.println(sum(10, 20, 30));
+                        System.out.println(sum(10, 20, 30, 40));
+                    }
+
+    How does varargs work?
+    - int... numbers accepts multiple integer arguments.
+    - Inside the method, numbers behaves like an array.
+    - You can use loops to access its elements.
+    - You can pass zero or more arguments.
+
+ Important rules of varargs
+    Rule 1: A method can have only one varargs parameter.
+            static void display(int... a) {
+            }
+    Rule 2: Varargs must be the last parameter.
+            static void display(String name, int... marks) {
+            }
+    Rule 3: You can combine normal parameters with varargs.
+            static void student(String name, int... marks) {
+
+                System.out.println(name);
+
+                for (int mark : marks) {
+                    System.out.println(mark);
+                }
+            }
+
+            Call - student("Aman", 80, 85, 90);
+
+Recursion in Java
+    Recursion is a technique in which a method calls itself to solve a problem.
+    A recursive method keeps calling itself with a smaller or simpler input until it reaches a stopping condition.
+
+    Every recursive method should have two important parts:
+        1. Base condition: Stops the recursion.
+        2. Recursive call: Calls the same method again.
+
+            static void printNumber(int n) {
+
+                // Base condition
+                if (n > 5) {
+                    return;
+                }
+
+                System.out.println(n);
+
+                // Recursive call
+                printNumber(n + 1);
+            }
+
+            public static void main(String[] args) {
+
+                printNumber(1);
+            }
+
+Factorial
+            static int factorial(int n) {
+
+                if (n == 0 || n == 1) {
+                    return 1;
+                }
+
+                return n * factorial(n - 1);
+            }
+
+            public static void main(String[] args) {
+
+                int result = factorial(5);
+
+                System.out.println(result);
+            }
