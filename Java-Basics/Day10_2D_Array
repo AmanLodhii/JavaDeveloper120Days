@@ -1,0 +1,161 @@
+What is a 2D Array?
+    A 2D array is an array of arrays. It stores multiple values of the same data type in a
+    structure that looks like a table or matrix.
+
+    Important points:
+         A 2D array stores data in rows and columns.
+         It is an array whose elements are themselves arrays.
+         Indexing starts from 0.
+         Each element is accessed using two indexes: row and column.
+
+2D Array Declaration and Initialization
+    A. Declaration
+        Syntax:    dataType[][] arrayName;
+        example -> int[][] numbers;
+                   double[][] prices;
+                   String[][] names;
+                   int numbers[][];
+
+    B. Declaration and initialization together
+        int[][] numbers = {
+            {10, 20, 30},
+            {40, 50, 60},
+            {70, 80, 90}
+        };
+
+Creating a 2D array using "new"
+    Syntax:     dataType[][] arrayName = new dataType[rows][columns];
+    Example:    int[][] numbers = new int[3][3];
+
+Declaration and initialization separately
+    int[][] numbers;
+
+    numbers = new int[][] {
+        {10, 20},
+        {30, 40}
+    };
+
+Nested Loops for Array Traversal
+    In a 2D array, we use nested loops because there are two dimensions.
+    - Outer loop → traverses rows.
+    - Inner loop → traverses columns.
+
+        public static void main(String[] args) {
+
+                int[][] numbers = {
+                    {10, 20, 30},
+                    {40, 50, 60},
+                    {70, 80, 90}
+                };
+
+                for (int i = 0; i < numbers.length; i++) {
+
+                    for (int j = 0; j < numbers[i].length; j++) {
+
+                        System.out.print(numbers[i][j] + " ");
+                    }
+
+                    System.out.println();
+                }
+        }
+Accessing and Updating Matrix Elements
+    To access an element, use:      arrayName[rowIndex][columnIndex]
+    Example -
+            int[][] numbers = {
+                {10, 20, 30},
+                {40, 50, 60},
+                {70, 80, 90}
+            };
+
+            // Accessing
+            System.out.println(numbers[0][1]);
+
+            // Updating
+            numbers[0][1] = 100;
+
+            System.out.println(numbers[0][1]);
+
+Calculate the sum of all elements
+    public static void main(String[] args) {
+
+            int[][] numbers = {
+                {10, 20, 30},
+                {40, 50, 60},
+                {70, 80, 90}
+            };
+
+            int sum = 0;
+
+            for (int i = 0; i < numbers.length; i++) {
+
+                for (int j = 0; j < numbers[i].length; j++) {
+
+                    sum += numbers[i][j];
+                }
+            }
+
+            System.out.println("Sum: " + sum);
+        }
+
+Taking 2D Array Input Using Scanner
+
+        public static void main(String[] args) {
+
+            Scanner sc = new Scanner(System.in);
+
+            System.out.print("Enter rows: ");
+            int rows = sc.nextInt();
+
+            System.out.print("Enter columns: ");
+            int columns = sc.nextInt();
+
+            int[][] matrix = new int[rows][columns];
+
+            // Taking input
+            for (int i = 0; i < rows; i++) {
+
+                for (int j = 0; j < columns; j++) {
+
+                    System.out.print(
+                        "Enter element [" + i + "][" + j + "]: "
+                    );
+
+                    matrix[i][j] = sc.nextInt();
+                }
+            }
+
+            // Displaying matrix
+            System.out.println("Your Matrix:");
+
+            for (int i = 0; i < rows; i++) {
+
+                for (int j = 0; j < columns; j++) {
+
+                    System.out.print(matrix[i][j] + "\t");
+                }
+
+                System.out.println();
+            }
+
+            sc.close();
+        }
+Jagged Arrays – Basic Introduction
+    A jagged array is a 2D array in which each row can have a different number of columns.
+    In a regular 2D array, all rows have the same number of columns.
+    In a jagged array, row lengths can differ.
+
+    Example -
+                int[][] numbers = new int[3][];
+
+                numbers[0] = new int[2];
+                numbers[1] = new int[3];
+                numbers[2] = new int[4];
+
+Difference Between 1D and 2D Arrays
+  1.  Feature	            1D Array	    2D Array
+  2.  Structure	            Linear	        Tabular
+  3.  Dimensions          	One	            Two
+  4.  Indexes	            One	            Two
+  5.  Declaration	        int[] a	        int[][] a
+  6.  Access	            a[0]	        a[0][0]
+  7.  Traversal         	One loop    	Nested loops

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Day09_String {
+public class Day09_Array {
 //    Find the Sum and Average of Array Elements
 
         public static void main(String[] args) {
