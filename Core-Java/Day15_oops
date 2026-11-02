@@ -1,0 +1,51 @@
+1. What is oops?
+2. Difference between procedural programming language and oops.
+3. Why use of oops?
+4. Real world analogy of oops
+5. Whys oops better for large scale apps?
+
+
+1. What is Object-Oriented Programming?
+    Object-Oriented Programming (OOP) is a programming paradigm (a way of writing and
+    organizing code) based on classes and objects.
+    It organizes programs by combining data and behavior into objects.
+
+OOP mainly consists of two fundamental concepts:
+    Class
+    -> A class is a blueprint or template used to create objects. It defines the properties
+        (variables) and behaviors (methods) that its objects can have.
+    Object
+    -> An object is an instance of a class. It has its own data (state) and can perform actions
+        (behavior).
+
+2. Procedural Programming vs OOP
+Basis	        Procedural Programming	                    OOP
+Approach	    Step-by-step instructions	            Classes and objects
+Focus	        Functions	                            Objects
+Data handling	Often separate from functions	        Combined with behavior
+Reusability	    Functions	                            Inheritance and composition
+Security	    No built-in object encapsulation    	Encapsulation and access control
+Structure	    Function-based	                        Class-based
+Suitable for	Smaller, task-oriented programs     	Complex, maintainable applications
+
+Why Do We Use OOP?
+    There are four important benefits:
+
+    1. Modularity
+    2. Code Reusability
+    3. Scalability
+    4. Data Security
+
+Why Is OOP Useful for Large-Scale Applications?
+    Consider applications such as banking systems, e-commerce platforms and hospital
+    management systems.
+
+    These applications contain multiple entities and functionalities.
+
+    OOP helps developers:
+    - Divide complex applications into smaller components.
+    - Reuse existing functionality.
+    - Maintain and modify code more easily.
+    - Control access to sensitive information.
+    - Extend applications with new features.
+
