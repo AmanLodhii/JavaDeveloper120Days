@@ -12,12 +12,17 @@
 
 OOP mainly consists of two fundamental concepts:
     Class
-    -> A class is a blueprint or template used to create objects. It defines the properties
-        (variables) and behaviors (methods) that its objects can have.
-    Object
-    -> An object is an instance of a class. It has its own data (state) and can perform actions
-        (behavior).
-
+                       -> A class is a blueprint or template used to create objects. It defines the properties
+                           (variables) and behaviors (methods) that its objects can have.
+                       Object
+                       -> An object is an instance of a class. It has its own data (state) and can perform actions
+                           (behavior).
+The four pillars are:
+    1. Encapsulation – Wrapping data and methods into a single unit and controlling
+    access to data.
+    2. Inheritance – Acquiring properties and methods from another class.
+    3. Polymorphism – One interface or method name with different behaviors.
+    4. Abstraction – Hiding implementation details and exposing essential functionality.
 2. Procedural Programming vs OOP
 Basis	        Procedural Programming	                    OOP
 Approach	    Step-by-step instructions	            Classes and objects
