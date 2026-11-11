@@ -1,0 +1,35 @@
+1. What is encapsulation?
+    Encapsulation means keeping a class’s data (fields) and the methods that operate on that
+data together, while hiding the data from outside code. Other classes can’t read or change
+the fields directly. They have to go through public methods that you control.
+
+    The usual way to do it is:
+        Make fields private.
+        Provide public methods (getters, setters, or behavior methods) to access them.
+
+2. Why do we use it?
+    - Data protection
+    - Validation in one place: the rules live inside the class, so every caller follows
+    them automatically.
+    - Flexibility: you can change the internal implementation (say, store marks as int
+    instead of double) without breaking other code.
+    - Easier debugging: if a value is wrong, only the class’s own methods could have changed it.
+    - Read-only or write-only control: you decide what is exposed.
+
+3. Access modifiers
+
+Access modifiers decide who can see a class member. They are the tool that makes
+encapsulation possible.
+
+Modifier	    Same class	    Same package	Subclass (other package)	Anywhere
+private	            Yes	            No	               No	                    No
+default(none)       Yes	            Yes	               No	                    No
+protected	        Yes	            Yes	               Yes	                    No
+public	             Yes	        Yes	               Yes	                    Yes
+
+- private: only inside the same class. Use it for fields.
+- default: no keyword. Visible only inside the same package.
+- protected: same package, plus subclasses even in other packages. Used for inheritance.
+- public: visible everywhere. Use it for the methods you want others to call.
+
+4. Getters and setters
