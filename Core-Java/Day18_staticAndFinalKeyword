@@ -1,0 +1,29 @@
+static keyword
+    Normally, every object gets its own copy of fields.
+    static means: “this belongs to the class itself, not to any one object.”
+
+Analogy: In a school, every student has their own roll number (instance),
+    but the school name is the same for everyone (static). You don’t store the school name
+    inside each student. You store it once.
+
+Memory view:
+    name lives inside each object on the heap. college is stored once at class level,
+    created when the class is loaded, and shared by all objects.
+
+static method -
+    Called using the class name, with no object needed.
+    Rules to remember:
+    A static method cannot use "this".
+    A static method cannot directly access non-static fields or methods, because there may be
+    no object yet. It would not know which object’s data to use.
+    A non-static method can access static members freely.
+
+Static block -
+    Runs once, when the class is first loaded, before main and before any object.
+
+final keyword
+    “this cannot be changed.” What exactly can’t change depends on where you use it.
+Used on	            Meaning
+Variable	        Value can’t be reassigned (a constant)
+Method	            Can’t be overridden by a child class
+Class	            Can’t be extended (no child classes)
