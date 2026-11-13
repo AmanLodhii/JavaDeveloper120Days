@@ -1,0 +1,33 @@
+Inheritance
+    Inherit the field and behaviour of the parent class to child class is called Inheritance.
+    Analogy: A child inherits features from parents (surname, eye color).
+In Java-
+    A child class gets the parent’s fields and methods for free, so you don’t rewrite code.
+
+    by using keyword "extends"
+    Terms to know:
+    Parent = superclass = base class
+    Child = subclass = derived class
+    extends = the keyword that creates the link
+
+What happens in memory
+    When you write new Dog(), one single object is created on the heap.
+    It contains the parent’s fields (name) plus the child’s fields.
+    There is no separate Animal object inside it.
+
+    Heap:  [ Dog object: name (from Animal) + Dog's own fields ]
+    Stack: d  ───────────►  (points to that Dog object)
+
+Types of inheritance in Java
+
+Type	                Example	                            Supported?
+Single	                B extends A	                            ✅
+Multilevel	            C extends B, B extends A	            ✅
+Hierarchical	        B and C both extend A	                ✅
+Multiple (classes)	    C extends A, B	                        ❌
+Hybrid	                mix of the above                ✅ only via interfaces
+
+Why no multiple inheritance? (Diamond problem)
+    If class C extended both A and B, and both had a show() method,
+    which one would C inherit? That ambiguity is the diamond problem.
+    Java avoids it for classes. A class can implement multiple interfaces instead.
