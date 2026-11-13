@@ -31,3 +31,42 @@ Why no multiple inheritance? (Diamond problem)
     If class C extended both A and B, and both had a show() method,
     which one would C inherit? That ambiguity is the diamond problem.
     Java avoids it for classes. A class can implement multiple interfaces instead.
+
+
+super(...) calls the parent constructor
+    Key rules:
+
+    - Parent constructor always runs first, then the child. The parent part of the
+    object must be ready before the child builds on it.
+    - If you don’t write super(...), Java silently inserts super(); (the no-argument call).
+    - Trap: if the parent has only a parameterized constructor and no no-arg one, the child
+    gets a compile error unless it calls super(args) explicitly.
+
+The Object class
+    Every class secretly extends Object, so all objects get these methods:
+Method	        Purpose
+toString()	    String form of the object
+equals()	    Compares objects (default is reference comparison)
+hashCode()	    Number used by HashMap, HashSet
+getClass()	    Returns runtime class info
+
+Printing an object without overriding toString() gives something like Dog@1b6d3586,
+    which is the Object version.
+
+HAS-A (composition)
+    class Engine { void start() { } }
+    class Car {
+        Engine engine = new Engine();   // Car HAS-A Engine
+        void drive() { engine.start(); }
+    }
+Rule of thumb: Use inheritance for IS-A and composition for HAS-A.
+When unsure, choose composition (“favor composition over inheritance”),
+because it is more flexible and doesn’t lock you into a rigid hierarchy.
+
+Rules summary
+    - Private members exist inside the child object but can’t be accessed directly.
+        Use getters or setters.
+    - Constructors are not inherited (but they are called using super).
+    - final class can’t be extended. final method can’t be overridden.
+    - Static methods aren’t overridden. They are hidden.
+    - A class can extend only one class but implement many interfaces.
