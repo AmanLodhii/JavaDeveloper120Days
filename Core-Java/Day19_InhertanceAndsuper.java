@@ -12,8 +12,8 @@
 //        System.out.println(name + " Braks");
 //    }
 //}
-//// multilevel inheritance
-//class A{
+// multilevel inheritance
+// class A{
 //    int number = 01;
 //    void show(){
 //        System.out.println("I am class A");
@@ -94,7 +94,7 @@ public class Day19_InhertanceAndsuper {
 
         System.out.println("super.field access a hidden parent field");
         B b1 = new B();
-        b1.show();;
+        b1.show();
 
         System.out.println("super(...) calls the parent constructor");
 

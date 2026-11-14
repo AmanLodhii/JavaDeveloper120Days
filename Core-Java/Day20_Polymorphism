@@ -1,0 +1,34 @@
+Polymorphism
+
+- Polymorphism means “many forms.” The same action can behave differently
+    depending on who does it.
+- Real-life example: You say “make a sound” to a dog, a cat, and a cow.
+    Same instruction, three different results. You don’t need a separate
+    command for each animal.
+
+Java has two kinds.
+    1. Overloading (decided when you compile)
+    Same method name, different inputs, in the same class.
+    2. Overriding (decided while the program runs)
+    A child class gives its own version of a parent’s method.
+
+Why backend developers care
+
+    interface Payment { void pay(double amount); }
+
+    class UpiPayment implements Payment {
+        public void pay(double amount) { System.out.println("UPI: " + amount); }
+    }
+    class CardPayment implements Payment {
+        public void pay(double amount) { System.out.println("Card: " + amount); }
+    }
+
+    class CheckoutService {
+        void checkout(Payment p, double amt) { p.pay(amt); }
+    }
+
+Quick comparison
+	                Overloading	            Overriding
+Where           	Same class	            Parent and child
+Method signature	Must be different   	Must be the same
+Decided	            Compile time	        Runtime

@@ -23,7 +23,7 @@ Static block -
 
 final keyword
     “this cannot be changed.” What exactly can’t change depends on where you use it.
-Used on	            Meaning
+Used on	             Meaning
 Variable	        Value can’t be reassigned (a constant)
 Method	            Can’t be overridden by a child class
 Class	            Can’t be extended (no child classes)
