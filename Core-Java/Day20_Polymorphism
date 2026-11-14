@@ -6,7 +6,10 @@ Polymorphism
     Same instruction, three different results. You don’t need a separate
     command for each animal.
 
-Java has two kinds.
+There are two main types of polymorphism in Java:
+    Compile-Time Polymorphism (Static Polymorphism)
+    Run-Time Polymorphism (Dynamic Polymorphism)
+
     1. Overloading (decided when you compile)
     Same method name, different inputs, in the same class.
     2. Overriding (decided while the program runs)
