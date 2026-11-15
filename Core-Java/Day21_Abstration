@@ -1,0 +1,54 @@
+Abstraction
+     It is the process of hiding the implementation details and showing
+     only the necessary features or interface to the user. In simpler terms,
+     abstraction allows us to focus on what an object does, rather than how
+     it does it.
+Key Features of Abstraction
+    Hiding Implementation Details
+    Abstract Methods
+    Concrete Methods
+Methods of Achieving Abstraction
+    In Java, abstraction can be implemented using:
+        Abstract Classes
+        Interfaces
+1. Abstract Classes:
+    An abstract class is a class that cannot be instantiated on its own
+    and must be inherited by a subclass. It can have both abstract methods
+    (without implementation) and concrete methods (with implementation).
+
+    Abstract methods are those that are declared but not implemented in
+    the abstract class, leaving the actual implementation to be provided
+    by the subclasses.
+2. Interface:
+    Static and Default Method
+
+1. Static Method
+    Static methods belong to the class rather than any instance of the class.
+    This means that they can be called without creating an object of the class.
+    Static methods can only directly access static members of the class,
+    not instance variables or instance methods. They are defined using the
+    static keyword.
+
+    Keypoints:
+    - They are called on the class itself, not on an instance of the class.
+    - They can be used to perform operations that are common to all instances
+        of a class.
+    - They can access only other static members (variables, methods) of the class.
+    - They cannot access instance variables or methods.
+
+2. Default Method
+    Default methods were introduced in Java 8 to allow adding new
+    functionality to interfaces without breaking existing implementations.
+    Prior to Java 8, interfaces could only declare method signatures,
+    leaving the implementation to the classes that implemented the interface.
+    With the introduction of default methods, interfaces can now provide
+    default implementations for methods.
+
+    Keypoints:
+    - Default methods have a body and are defined using the default keyword
+        in the interface.
+    - They can be called on objects that implement the interface.
+    - They allow user to add new methods to an interface without affecting
+        existing classes that implement the interface.
+    - If a class implements an interface with a default method, the class
+        can override the method if needed.
