@@ -1,0 +1,27 @@
+Interface
+An interface in Java is a blueprint of a class that defines a contract for behavior
+but does not provide an implementation. It contains a set of abstract methods
+(methods without a body) that a class must implement if it chooses to
+"sign the contract" by implementing the interface. Think of it as a way to
+specify what a class should do without dictating how it should do it.
+
+Can interface have instance variables?
+No, an interface cannot have instance variables. All fields in an interface
+are implicitly public, static, and final. This means they act as constants
+and cannot be changed. Attempting to declare a non-static or non-final field
+will result in a compilation error.
+
+Can Interfaces Have Constructors?
+No, interfaces cannot have constructors. This is because constructors are
+used to initialize the state of an object, and interfaces cannot have state
+(no instance variables). Since interfaces are not classes and cannot be
+instantiated directly, they do not need constructors.
+
+an a Class Implement Multiple Interfaces?
+Yes, a class in Java can implement multiple interfaces.
+This is one of the key advantages of using interfaces because Java does not
+support multiple inheritance with classes, but it does with interfaces.
+
+Default and Static Methods in Interfaces
+    1. Static Method
+    2. Default Method
